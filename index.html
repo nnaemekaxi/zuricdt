@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYOUT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="main-wrapper">
+            <section class="input-section">
+                <form action="/" method="post" id="validateAllInputs">
+                    <label for="cardNumber1">CARD NUMBER</label>
+                    <span class="card-num">
+                        <input type="text" name="cardNumber" id="cardNumber1">
+                        <input type="text" name="cardNumber" id="cardNumber2">
+                        <input type="text" name="cardNumber" id="cardNumber3">
+                        <input type="text" name="cardNumber" id="cardNumber4" maxlength="4">
+                    </span>
+                    <label for="cardHolder">CARD HOLDER</label>
+                    <p><input type="text" name="cardHolder" id="cardHolder" class="holder-input"></p>
+                    <div class="expiration-ccv">
+                        <aside>
+                            <label for="expiration">EXPIRES</label>
+                        <span>
+                            <select name="month" id="month">
+                            <option value=""></option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            </select>
+                            <select name="year" id="year">
+                                <option value=""></option>
+                                <option value="23">23</option>
+                                <option value="23">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                            </select>
+                        </span>
+                        </aside>
+                        <aside>
+                            <label for="ccv">CCV</label>
+                            <p><input type="text" name="ccv" id="ccv" maxlength="4"></p>
+                        </aside>
+                    </div>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </section>
+            <section class="card-section">
+                <aside class="image-section">
+                <img src="chip.png" alt="chip" id="chip" class="card-chip"> 
+                <img src="./visa.webp" alt="cardImg" id="cardImg" class="card-img">
+                </aside>
+                <aside class="desc-section">
+                    <span><p>CARD HOLDER</p> <p id="holderName"></p></span>
+                    <span><p>EXPIRES</p><p id="expiryDate"></p></span>
+                </aside>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
