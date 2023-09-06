@@ -15,7 +15,7 @@
 .card-section{
     width: 400px;
     height: 200px;
-    background: hsl(348.61deg 30.98% 50%);
+    background: linear-gradient(to bottom right, hsl(349, 39%, 60%), hsl(349, 37%, 35%));
     margin: -550px auto 0;
     border-radius: 16px;
     box-shadow: 2px 4px 36px black;
@@ -79,6 +79,17 @@
     display: flex;
     justify-content: space-between;
 }
+.expiration-ccv aside{
+    width: 50%;
+}
+.ccv-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.ccv-section label{
+    margin-right: 30%;
+}
 .expiration-ccv span{
     display: flex;
     gap: 16px;
@@ -103,4 +114,21 @@ button{
 button:hover{
     background: linear-gradient(to bottom, rgb(17, 83, 61), rgb(1, 41, 28));
 
+}
+@media screen and (max-width: 500px){
+    .card-section{
+        width: 95%;
+    }
+    .image-section,.desc-section{
+        width: 90%;
+    }
+    .input-section{
+        width: 100%;
+    }
+    .card-num input{
+        width: 25%;
+    }
+    button, .holder-input{
+        width: 100%;
+    }
 }
